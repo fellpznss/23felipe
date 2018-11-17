@@ -1,0 +1,14 @@
+@model RegistroViewModel
+@Html.ValidationSummary()
+@using(Html.BeginForm("Salva","Usuario",FormMethod.Post))
+{
+    @Html.LabelFor(rvm=>rvm.Nome)
+    @Html.TextBoxFor(rvm=>rvm.Nome)
+    @Html.LabelFor(rvm=>rvm.Email)
+    @Html.TextBoxFor(rvm=>rvm.Email)
+    @Html.LabelFor(rvm=>rvm.Senha)
+    @Html.PasswordFor(rvm=>rvm.Senha)
+    @Html.LabelFor(rvm=>rvm.Confirmacao)
+    @Html.PasswordFor(rvm=>rvm.Confirmacao)
+    <button class="btn btn-primary" type="submit">Login </button>
+}

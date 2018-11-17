@@ -1,0 +1,10 @@
+@model Post
+
+	@using(Html.BeginForm("Adiciona", "Post"))
+	{
+		@Html.EditorFor(post => post)
+		<button	type="submit" class="btn	btn-primary">Cadastrar</button>
+		@section Scripts{
+			@Html.Partial("_Scripts")
+		}
+	}

@@ -1,0 +1,17 @@
+﻿@model	LoginViewModel
+
+    <div class="container">
+        <main id="login-form">
+            <h2>Resenha	Cultural	-	Login</h2>
+            @Html.ValidationSummary()
+            @using (Html.BeginForm("Login", "Usuario", FormMethod.Post))
+            {
+                @Html.LabelFor(lvm => lvm.Login)
+                @Html.TextBoxFor(lvm=> lvm.Login, new { @class = "form-control" })
+                @Html.LabelFor(lvm => lvm.Senha)
+                @Html.PasswordFor(lvm => lvm.Senha, new { @class = "form-control" })
+                <button class="btn btn-primary" type="submit">Login </button>
+            }
+
+        </main>
+    </div>

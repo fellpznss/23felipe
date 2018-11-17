@@ -1,0 +1,26 @@
+    <!DOCTYPE	html>
+    <html>
+    <head>
+                        <meta	name="viewport" content="width=device-width"	/>
+                        <title>Resenha	Cultural</title>
+                        <link	href="~/css/jquery-ui.css" rel="stylesheet" type="text/css"/>
+                        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+                        <link	href="~/css/estilo.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+                        <!--	cabeçalho	-->
+                        @Html.Partial("Cabecalho")
+                        <div	class="container	clearfix">
+                                        <!--	região	principal	-->
+                                        <main>
+                                                        @RenderBody()
+                                        </main>
+                                        <!--	menu	lateral	-->
+                                        @Html.Partial("Lateral")
+                        </div>
+                        <!--	rodapé	-->
+                        @Html.Partial("Rodape")
+                        <!--	seção	opcional	para	carregar	os	scripts	-->
+                        @RenderSection("Scripts",	false)
+    </body>
+    </html>
